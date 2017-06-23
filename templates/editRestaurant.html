@@ -1,0 +1,20 @@
+<html>
+
+<body>
+	<center>
+
+		<div class="col-md-2 text-right">
+			<a href="{{url_for('gdisconnect')}}" style="font-size:18;text-align:right;position:absolute; top:10; right:10;">Logout </a>
+		</div>
+		<h1>Edit Restaurant</h1>
+		<form action= "{{url_for('editRestaurant', restaurant_id = item.id)}}" method = 'POST'>
+
+			<p>Name:</p>
+			<input type = 'text' size='30' name = 'name' placeholder = '{{item.name}}'>
+
+			<input type='submit' value='Edit'>
+		</form>
+		<a href= '{{url_for('restaurantlist')}}'>Cancel</a>
+	<center>
+</body>
+</html>
